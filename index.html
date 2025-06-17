@@ -10,112 +10,136 @@
 
   <style>
     body {
-      font-family: 'Lato', Arial, sans-serif;
-      background-color: #E9F1F7;
-      margin: 0;
-      padding: 30px 20px;
-      color: #000000; /* black text */
-    }
-    header {
-      text-align: center;
-      margin-bottom: 50px;
-      font-family: 'Lora', serif;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    header h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      color: #000000; /* black */
-      letter-spacing: 3px;
-      font-weight: 700;
-    }
-    header h2 {
-      font-size: 2rem;
-      margin-top: 0.3em;
-      font-style: italic;
-      color: #623CEA; /* purple accent */
-      font-weight: 700;
-    }
-    .celebrant-pic {
-      margin: 30px auto 60px;
-      height: 300px;     
-      border: 10px solid #f9f9f9; /* purple border */
-      box-shadow: 0 4px 12px rgba(98, 60, 234, 0.4); /* soft purple shadow */
-      object-fit: cover;
-      background: white;
-      display: block;
-    }
-    section {
-      max-width: 700px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    section h3 {
-      font-family: 'Lora', serif;
-      font-size: 2.5rem;
-      margin-bottom: 25px;
-      border-bottom: 4px solid #623CEA; /* purple underline */
-      padding-bottom: 10px;
-      color: #000000; /* black */
-      font-weight: 700;
-    }
-    .message-container {
-      background-color: #f9f9f9; /* very light gray background */
-      border-left: 6px solid #623CEA; /* purple accent */
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 25px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      color: #000000; /* black text */
-      transition: background-color 0.3s ease;
-    }
-    .message-container:hover {
-      background-color: #e6e0f8; /* subtle purple hover */
-    }
-    .message-container img {
-      width: 75px;
-      height: 75px;
-      border-radius: 50%;
-      border: 3px solid #623CEA;
-      object-fit: cover;
-      margin-right: 25px;
-      background: white;
-    }
-    .message-text {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      font-weight: 400;
-      flex: 1;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-      header h2 {
-        font-size: 1.4rem;
-      }
-      section h3 {
-        font-size: 1.8rem;
-      }
-      .message-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .message-container img {
-        margin-bottom: 15px;
-        margin-right: 0;
-      }
-    }
+  font-family: "Lato", Arial, sans-serif;
+  background-color: #e9f1f7;
+  margin: 0;
+  padding: 30px 20px;
+  color: #000000; /* black text */
+}
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Lora", serif;
+  /*       max-width: 600px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #000000; /* black */
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+header h2 {
+  font-size: 2rem;
+  margin-top: 0.3em;
+  font-style: italic;
+  color: #623cea; /* purple accent */
+  font-weight: 700;
+}
+.celebrant-pic {
+  margin: 30px auto 60px;
+  /*       width: 250px; */
+  height: 300px;
+  /*       border-radius: 50%; */
+  border: 10px solid #f9f9f9; /* purple border */
+  box-shadow: 0 4px 12px rgba(98, 60, 234, 0.4); /* soft purple shadow */
+  object-fit: cover;
+  background: white;
+  display: block;
+}
+section {
+  max-width: 700px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+section h3 {
+  font-family: "Lora", serif;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  border-bottom: 4px solid #623cea; /* purple underline */
+  padding-bottom: 10px;
+  color: #000000; /* black */
+  font-weight: 700;
+}
+.message-container > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0 0 6px 0;
+}
+
+.message-sender {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #623cea; /* purple accent */
+  opacity: 0.8;
+}
+
+.message-container {
+  background-color: #f9f9f9; /* very light gray background */
+  border-left: 6px solid #623cea; /* purple accent */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #000000; /* black text */
+  transition: background-color 0.3s ease;
+}
+.message-container:hover {
+  background-color: #e6e0f8; /* subtle purple hover */
+}
+.message-container img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 3px solid #623cea;
+  object-fit: cover;
+  margin-right: 25px;
+  background: white;
+}
+.message-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  flex: 1;
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header h2 {
+    font-size: 1.4rem;
+  }
+  section h3 {
+    font-size: 1.8rem;
+  }
+  .message-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .message-container img {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
   </style>
 </head>
 <body>
   <header>
   <h1>Happy Birthday, Joy!</h1>
-  <img class="celebrant-pic" src="https://res.cloudinary.com/aoliadi/image/upload/v1750075473/d1dfebd01702470ab07f0e336e70e039_knchwb.jpg" alt="celebrant's picture" />
+  <img class="celebrant-pic" src="https://res.cloudinary.com/aoliadi/image/upload/v1750144936/joy_nyaknoabasi.jpg" alt="celebrant's picture" />
 </header>
 
 <section>
@@ -126,34 +150,36 @@
   <!-- JavaScript -->
   <script>
   const birthdayMessages = [
-    {
-      name: "John",
-      photo: "https://randomuser.me/api/portraits/men/32.jpg",
-      message: "Wishing you a fantastic birthday, Ahmed! May your year be filled with happiness and success."
-    },
-    {
-      name: "Sara",
-      photo: "https://randomuser.me/api/portraits/women/44.jpg",
-      message: "Happy Birthday, Ahmed! Hope your day is as wonderful as you are."
-    },
-    {
-      name: "Mike",
-      photo: "https://randomuser.me/api/portraits/men/65.jpg",
-      message: "Cheers to you, Ahmed! Have an amazing birthday and a year full of adventures."
-    }
-  ];
+  {
+    name: "susan",
+    message:
+      "Wishing you a fantastic birthday, Ahmed! May your year be filled with happiness and success."
+  },
+  {
+    name: "ademola",
+    message: "Happy Birthday, Ahmed! Hope your day is as wonderful as you are."
+  },
+  {
+    name: "kiitan",
+    message:
+      "Cheers to you, Ahmed! Have an amazing birthday and a year full of adventures."
+  }
+];
 
-  const messagesContainer = document.getElementById('messages');
+const messagesContainer = document.getElementById("messages");
 
-  birthdayMessages.forEach(({ name, photo, message }) => {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = 'message-container';
-    messageDiv.innerHTML = `
-      <img src="${photo}" alt="${name}'s picture" />
-      <p class="message-text">${message}</p>
-    `;
-    messagesContainer.appendChild(messageDiv);
-  });
+birthdayMessages.forEach(({ name, message }) => {
+  const messageDiv = document.createElement("div");
+  messageDiv.className = "message-container";
+  messageDiv.innerHTML = `
+  <img src="https://res.cloudinary.com/aoliadi/image/upload/v1750144936/${name}.jpg" alt="${name}'s picture" />
+  <div>
+    <p class="message-text">${message}</p>
+    <span class="message-sender">${name}</span>
+  </div>`;
+  messagesContainer.appendChild(messageDiv);
+});
+
 </script>
 
 </body>
