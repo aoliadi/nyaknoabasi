@@ -120,21 +120,41 @@
 
 <section>
   <h3>Birthday Messages</h3>
-
-  <div class="message-container">
-    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John's picture" />
-    <p class="message-text">Wishing you a fantastic birthday, Joy! May your year be filled with happiness and success.</p>
-  </div>
-
-  <div class="message-container">
-    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sara's picture" />
-    <p class="message-text">Happy Birthday, Joy! Hope your day is as wonderful as you are.</p>
-  </div>
-
-  <div class="message-container">
-    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Mike's picture" />
-    <p class="message-text">Cheers to you, Joy! Have an amazing birthday and a year full of adventures.</p>
-  </div>
+  <div id="messages"></div>
 </section>
+
+  <!-- JavaScript -->
+  <script>
+  const birthdayMessages = [
+    {
+      name: "John",
+      photo: "https://randomuser.me/api/portraits/men/32.jpg",
+      message: "Wishing you a fantastic birthday, Ahmed! May your year be filled with happiness and success."
+    },
+    {
+      name: "Sara",
+      photo: "https://randomuser.me/api/portraits/women/44.jpg",
+      message: "Happy Birthday, Ahmed! Hope your day is as wonderful as you are."
+    },
+    {
+      name: "Mike",
+      photo: "https://randomuser.me/api/portraits/men/65.jpg",
+      message: "Cheers to you, Ahmed! Have an amazing birthday and a year full of adventures."
+    }
+  ];
+
+  const messagesContainer = document.getElementById('messages');
+
+  birthdayMessages.forEach(({ name, photo, message }) => {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'message-container';
+    messageDiv.innerHTML = `
+      <img src="${photo}" alt="${name}'s picture" />
+      <p class="message-text">${message}</p>
+    `;
+    messagesContainer.appendChild(messageDiv);
+  });
+</script>
+
 </body>
 </html>
